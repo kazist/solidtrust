@@ -1,0 +1,113 @@
+{
+    "frontend": [{
+            "title": "Solidtrust Payments Return",
+            "description": "Solidtrust Payments Return.",
+            "controller": "Solidtrust\\Payments\\Code\\Controllers\\SolidtrustController::returnAction",
+            "unique_name": "solidtrust.payments.return",
+            "route": "solidtrust/payments/return",
+            "permissions": "can_view, can_viewown",
+            "arguments": "",
+            "keywords": "solidtrust, return",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+
+        }, {
+            "title": "Solidtrust Payments Cancelled",
+            "description": "Solidtrust Payments Cancelled",
+            "controller": "Solidtrust\\Payments\\Code\\Controllers\\SolidtrustController::cancelAction",
+            "unique_name": "solidtrust.payments.cancel",
+            "route": "solidtrust/payments/cancel",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "solidtrust, cancel",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+        }, {
+            "title": "Solidtrust Payments Notify ",
+            "description": "Solidtrust Payments Notify ",
+            "controller": "Solidtrust\\Payments\\Code\\Controllers\\SolidtrustController::notifyAction",
+            "unique_name": "solidtrust.payments.notify",
+            "route": "solidtrust/payments/notify",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "solidtrust, notify",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+        }],
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Solidtrust\\Payments\\Code\\Controllers\\Admin\\SolidtrustController::taskAction",
+            "unique_name": "admin.solidtrust.payments.task",
+            "route": "admin/solidtrust/payments/task",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": "",
+            "keywords": "solidtrust, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Solidtrust Payments List",
+            "description": "Management of Solidtrust Payments.",
+            "controller": "Solidtrust\\Payments\\Code\\Controllers\\Admin\\SolidtrustController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.solidtrust.payments",
+            "route": "admin/solidtrust/payments",
+            "arguments": "",
+            "keywords": "solidtrust, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Solidtrust Payments Detail: {{ item.name }}",
+            "description": "Solidtrust Payments Detail: {{ item.name }}",
+            "controller": "Solidtrust\\Payments\\Code\\Controllers\\Admin\\SolidtrustController::detailAction",
+            "unique_name": "admin.solidtrust.payments.detail",
+            "route": "admin/solidtrust/payments/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "solidtrust, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Solidtrust Payments Delete: {{ item.name }}",
+            "description": "Solidtrust Payments Delete: {{ item.name }}",
+            "controller": "Solidtrust\\Payments\\Code\\Controllers\\Admin\\SolidtrustController::deleteAction",
+            "unique_name": "admin.solidtrust.payments.delete",
+            "route": "admin/solidtrust/payments/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "solidtrust, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }]
+} 	
