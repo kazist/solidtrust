@@ -20,6 +20,12 @@ use Payments\Payments\Code\Models\PaymentsModel AS BasePaymentsModel;
  */
 class PaymentsModel extends BasePaymentsModel {
 
+    public function appendSearchQuery($query) {
+
+        $this->ingore_search_query = true;
+        return parent:: appendSearchQuery($query);
+    }
+
     public function notificationTransaction($payment_id) {
 
         $factory = new KazistFactory();
@@ -49,7 +55,7 @@ class PaymentsModel extends BasePaymentsModel {
         $posted_data['user9'] = $this->request->request->get('user9');
         $posted_data['user10'] = $this->request->request->get('user10');
 
-        $secondary_password = Phpfox::getParam('mlmfinance.secondary_password');
+        $secondary_password = Phpfox::getParam('mlmpayments.secondary_password');
         $secondary_password = md5($secondary_password . 's+E_a*');
 
 //encryption for db

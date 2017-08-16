@@ -8,7 +8,7 @@
  */
 
 /**
- * Description of SolidtrustController
+ * Description of PaymentsController
  *
  * @author sbc
  */

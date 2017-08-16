@@ -1,0 +1,6 @@
+{
+    "SolidtrustPayments": {
+        "namespace": "Solidtrust\\Payments",
+        "controller": "PaymentsController"
+    }
+}
