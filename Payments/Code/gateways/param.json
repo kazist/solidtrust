@@ -1,0 +1,7 @@
+[{
+        "name": "username",
+        "label": "Username",
+        "default": "",
+        "tooltip": "Enter Your Solidtrust Username.",
+        "type": "text"
+    }]

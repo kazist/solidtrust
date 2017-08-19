@@ -1,0 +1,18 @@
+{
+    "title": "Solidtrust",
+    "alias": "solidtrust",
+    "groups": [{
+            "title": "Solidtrust Setting",
+            "settings": [{
+                    "name": "solidtrust_payments_merchantAccount",
+                    "label": "merchant Account",
+                    "default": "",
+                    "type": "text"
+                }, {
+                    "name": "solidtrust_payments_logo",
+                    "label": "Your Logo",
+                    "default": "http://www.yoursite.com/yourlogo.gif",
+                    "type": "text"
+                }]
+        }]
+}
