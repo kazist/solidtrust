@@ -7,11 +7,13 @@
                     "name": "solidtrust_payments_merchantAccount",
                     "label": "merchant Account",
                     "default": "",
+                    "tooltip": "Set solidtrust merchant Account as provided on solidtrust website.",
                     "type": "text"
                 }, {
                     "name": "solidtrust_payments_logo",
                     "label": "Your Logo",
                     "default": "http://www.yoursite.com/yourlogo.gif",
+                    "tooltip": "Set your preferred button to be show on the form.",
                     "type": "text"
                 }]
         }]
